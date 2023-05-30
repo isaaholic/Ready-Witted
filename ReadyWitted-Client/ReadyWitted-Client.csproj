@@ -50,11 +50,8 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="isaaholic.ReadyWitted" Version="1.0.0" />
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\ReadyWitted-Library\ReadyWitted-Library.csproj" />
     </ItemGroup>
 
 </Project>

@@ -1,1 +1,37 @@
 ﻿@page "/"
+
+<div class="flex">
+    <div class="mx-auto">
+        <form>
+            <div>
+            <label>API KEY</label>
+            <input @bind-value="_apiKey" type="text" />
+            </div>
+            <div>
+            <label>What is your question?</label>
+            <input @bind-value="_question" type="text" />
+            </div>
+            <div class="bg-sky-500 rounded-lg">
+            <input @onclick="OnSubmit" type="button" value="Submit" />
+            </div>
+        </form>
+    </div>
+    <div>
+        <label>@_answer</label>
+    </div>
+</div>
+
+@using isaaholic.ReadyWittedLibrary;
+
+@code{
+    private string _apiKey;
+    private string _question;
+    private string _answer;
+
+    public async void OnSubmit()
+    {
+        ReadyWitted.CreateInstance(_apiKey);
+        _answer = await ReadyWitted.AskSimpleQuestion(_question);
+        StateHasChanged();
+    }
+}
