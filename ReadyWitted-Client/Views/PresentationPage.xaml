@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReadyWitted_Client.Views.PresentationPage"
+             Title="Presentation Page">
+    <ScrollView>
+        <VerticalStackLayout Spacing="15">
+            <Label 
+            Text="Presentation"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+            <Label
+            x:Name="editor"
+            MinimumHeightRequest="250"
+            />
+            <Label 
+                x:Name="txtDown"
+                Text="Do you want download it?"
+                IsVisible="false"
+                />
+            <Button 
+                x:Name="btnDown"
+                Text="Download" 
+                Clicked="btnDown_Clicked"
+                IsVisible="false"
+                />
+            <Label 
+            Text="API KEY"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            />
+            <Entry
+            x:Name="eApiKey"
+            Placeholder="API KEY"
+            TextChanged="eApiKey_TextChanged"
+            />
+            <Label 
+            Text="Presentation Theme"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            />
+            <Entry
+            x:Name="eTheme"
+            Placeholder="Presentation Theme"
+            TextChanged="eTheme_TextChanged"
+            />
+            <Button 
+            x:Name="btnSubmit"
+            Text="Submit"
+            Clicked="btnSubmit_Clicked"
+            />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
